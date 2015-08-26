@@ -1,0 +1,75 @@
+#include<stdio.h>
+#include<conio.h>
+
+
+int main()
+{
+	int dd, mm;
+	printf("JANUARY\t 01\nFEBRUARY 02\nMARCH\t 03\nAPRIL\t 04\nMAY\t 05\nJUNE\t 06\nJULY\t 07\nAUGUST\t 08\nSEPTEMBER 09\nOCTOBER\t 10\nNOVEMBER 11\nDECEMBER 12\n");
+	printf("ENTER DATE OF BIRTH\n");
+	printf("ENTER DATE");
+	scanf("%d",&dd);
+	if(dd<1||dd>31)
+	{
+		printf("Invalid Date");return 0;
+	}
+	printf("ENTER MONTH");
+	scanf("%d",&mm);
+	if(mm<1||mm>12)
+	{
+		printf("Invalid Month");
+    }
+    
+    
+	if(((dd>=21&&dd<=31)&&(mm==3))||((dd>=1&&dd<=19)&&(mm==4)))
+	{
+		printf("ARIES");
+	}
+    if(((dd>=20&&dd<=31)&&(mm==4))||((dd>=1&&dd<=20)&&(mm==5)))
+    {
+    	printf("TAURUS");
+    }
+    if(((dd>=21&&dd<=31)&&(mm==5))||((dd>=1&&dd<=20)&&(mm==6)))
+    {
+    	printf("GEMINI");
+    }
+    if(((dd>=21&&dd<=31)&&(mm==6))||((dd>=1&&dd<=22)&&(mm==7)))
+    {
+    	printf("CANCER");
+    }
+    if(((dd>=23&&dd<=31)&&(mm==7))||((dd>=1&&dd<=22)&&(mm==8)))
+    {
+    	printf("LEO");
+    }
+    if(((dd>=23&&dd<=31)&&(mm==8))||((dd>=1&&dd<=22)&&(mm==9)))
+    {
+    	printf("VIRGO");
+    }
+     if(((dd>=23&&dd<=31)&&(mm==9))||((dd>=1&&dd<=22)&&(mm==10)))
+     {
+     	printf("LIBRA");
+     }
+     if(((dd>=23&&dd<=31)&&(mm==10))||((dd>=1&&dd<=21)&&(mm==11)))
+     {
+     	printf("SCORPIO");
+     }
+      if(((dd>=22&&dd<=31)&&(mm==11))||((dd>=1&&dd<=21)&&(mm==12)))
+      {
+      	printf("SAGATTARIUS");
+      }
+      if(((dd>=22&&dd<=31)&&(mm==12))||((dd>=1&&dd<=19)&&(mm==1)))
+      {
+      	printf("CAPRICON");	
+      }
+      if(((dd>=20&&dd<=31)&&(mm==1))||((dd>=1&&dd<=18)&&(mm==2)))
+      {
+      	printf("AQUARIUS");
+      	
+      }
+      if(((dd>=19&&dd<=2)&&(mm==1))||((dd>=1&&dd<=20)&&(mm==3)))
+      {
+      	printf("PISCES");	
+      }
+	getch();
+	return 0;
+}
