@@ -1,0 +1,59 @@
+#include<iostream>
+
+using namespace std;
+struct node
+{
+    int data;
+    node *next;
+}*front = NULL,*rear = NULL,*p = NULL,*np = NULL;
+
+class queue{
+	void push(int x){
+    	np = new node;
+    	np->data = x;
+    	np->next = NULL;
+    	if(front == NULL){
+        	front = rear = np;
+        	rear->next = NULL;
+    	}
+    	else{
+        	rear->next = np;
+        	rear = np;
+        	rear->next = NULL;
+    	}
+	}
+	int pop(){
+    	int x;
+    	if(front == NULL)
+        	cout<<"The queue is empty\n";
+    	else{
+	        p = front;
+    	    x = p->data;
+        	front = front->next;
+        pop();
+        return(x);
+    	}
+	}
+};
+/*int main()
+{
+    int l,c = 0,x;
+    cout<<"Enter Queue length";
+    cin>>l;
+    while (c < l)
+    {
+	cout<<"Enter value\n";
+	cin>>x;
+        push(x);
+        c++;
+     }
+     cout<<"Removing values"<<endl;
+     while(true)
+     {
+        if (front != NULL)
+            cout<<pop()<<endl;
+        else
+            break;
+     }
+     return 0;
+}
