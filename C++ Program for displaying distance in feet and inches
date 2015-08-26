@@ -1,0 +1,35 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Distance
+{
+	int feet;
+	int inches;
+	public:
+		void accept();
+		void display();
+};
+void Distance::accept()
+{
+	cout<<"Enter Distance in Inches"<<endl;
+	cin>>inches;
+	feet=inches/12;
+	inches=inches%12;
+} 
+void Distance::display()
+{
+	cout<<feet<<" FEET and "<<inches<<" INCHES."<<endl;
+}
+main()
+{
+	int i;
+	Distance obj[3];
+	for(i=0;i<3;i++)
+	{
+		obj[i].accept();
+		obj[i].display();
+	}
+
+	return 0;
+}
