@@ -1,0 +1,56 @@
+#include<iostream>
+
+using namespace std;
+
+class stack{
+public:
+	int n;
+	void scan(int);
+	int a[n];
+	int top=0;
+	void push(int);
+	void pop();
+	void display();
+};
+
+void stack::scan(int u){
+	n=u;
+}
+
+void stack::push(int item){
+	if(*a==NULL)
+		return;
+	else{
+		top++;
+		a[top]=item;
+	}
+}
+
+void stack::pop(){
+	if(top==n){
+		return;
+	}
+	else
+		top--;
+}
+
+void stack:: display(){
+	int i;
+	for(i=0;i<top;i++)
+		cout<<a[i]<<endl;
+}
+
+int main(){
+	stack arr;
+	arr.scan(6);
+	arr.push(10);
+	arr.push(15);
+	arr.push(6);
+	arr.push(5);
+	arr.push(17);
+	arr.push(1);
+	arr.pop();
+	arr.pop();
+	
+	arr.display();
+}
